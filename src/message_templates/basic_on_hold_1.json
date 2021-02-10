@@ -4,7 +4,7 @@
 			"type": "header",
 			"text": {
 				"type": "plain_text",
-				"text": "ON HOLD - Awaiting Approval :raised_hand:",
+				"text": "\\n$SLACK_PARAM_ON_HOLD_TITLE",
 				"emoji": true
 			}
 		},
