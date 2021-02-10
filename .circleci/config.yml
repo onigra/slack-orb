@@ -141,3 +141,8 @@ workflows:
           matrix:
             parameters:
               runner: [cimg, mac, alpine]
+
+      # title modify test
+      - slack/on-hold:
+          context: slack-notification
+          title: "Modify Title Test"
