@@ -141,18 +141,3 @@ workflows:
           matrix:
             parameters:
               runner: [cimg, mac, alpine]
-
-      - orb-tools/dev-promote-prod-from-commit-subject:
-          orb-name: circleci/slack
-          context: orb-publishing
-          add-pr-comment: true
-          bot-token-variable: GHI_TOKEN
-          bot-user: cpe-bot
-          fail-if-semver-not-indicated: true
-          publish-version-tag: true
-          ssh-fingerprints: 79:ae:f5:10:17:8a:d2:9a:ed:63:5c:b0:92:66:23:49
-          requires:
-            - integration-test-templates
-          filters:
-            branches:
-              only: master
