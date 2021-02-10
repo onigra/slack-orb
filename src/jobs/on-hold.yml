@@ -42,6 +42,9 @@ docker:
   - image: cimg/base:stable
 resource_class: small
 
+environment:
+  SLACK_PARAM_ON_HOLD_TITLE: <<parameters.title>>
+
 steps:
   - notify:
       event: always
@@ -50,4 +53,3 @@ steps:
       custom: <<parameters.custom>>
       mentions: <<parameters.mentions>>
       channel: <<parameters.channel>>
-
