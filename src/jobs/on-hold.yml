@@ -32,6 +32,11 @@ parameters:
         Select which channel in which to post to. Channel name or ID will work. You may include a comma separated list of channels if you wish to post to multiple channels at once. Set the "SLACK_DEFAULT_CHANNEL" environment variable for the default channel.
       type: string
       default: $SLACK_DEFAULT_CHANNEL
+  title:
+    description: |
+      (optional) Enter a custom header text.
+    type: string
+    default: "ON HOLD - Awaiting Approval :raised_hand:"
 
 docker:
   - image: cimg/base:stable
